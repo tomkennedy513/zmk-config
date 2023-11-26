@@ -11,7 +11,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        main {
             // -----------------------------------------------------------------------------------------
             // |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |
             // |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |
@@ -28,10 +28,10 @@
 
         symbol {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&none  &kp EXCL   &kp AT          &kp HASH        &kp DOLLAR     &kp PERCENT    &kp PLUS   &kp EQUAL       &kp QUESTION           &kp PIPE                 &kp BACKSLASH  &trans
+&none  &kp CARET  &mt LCTRL AMPS  &mt LALT ASTRK  &mt LCMD LPAR  &kp RPAR       &kp UNDER  &mt LCMD MINUS  &mt LALT SINGLE_QUOTE  &mt LCTRL DOUBLE_QUOTES  &kp SLASH      &trans
+&none  &kp LBKT   &kp RBKT        &kp LBRC        &kp RBRC       &to 0          &kp SEMI   &kp COLON       &kp GRAVE              &kp TILDE                &kp ENTER      &trans
+                                  &trans          &trans         &to 2          &trans     &trans          &trans
             >;
         };
 
