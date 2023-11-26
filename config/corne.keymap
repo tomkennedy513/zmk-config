@@ -39,8 +39,17 @@
             bindings = <
 &none  &kp N1  &kp N2        &kp N3       &kp N4       &kp N5    &none     &none     &none   &none      &none      &none
 &none  &kp N6  &mt LCTRL N7  &mt LALT N8  &mt LCMD N9  &kp N0    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none      &none
-&none  &none   &none         &none        &none        &to 0     &none     &none     &none   &none      &kp ENTER  &none
+&none  &to 3   &none         &none        &none        &to 0     &none     &none     &none   &none      &kp ENTER  &none
                              &trans       &trans       &trans    &to 1     &trans    &trans
+            >;
+        };
+
+        ctrl_board {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
