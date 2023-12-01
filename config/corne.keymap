@@ -26,10 +26,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q         &kp W        &kp F                 &kp P       &kp B            &kp J      &kp L       &kp U              &kp Y        &mt ESC TAB   &none
-&none  &mt LSHIFT A  &mt LCTRL R  &mt LALT S            &mt LCMD T  &kp G            &kp M      &mt LCMD N  &mt LALT E         &mt LCTRL I  &mt LSHIFT O  &none
-&none  &kp Z         &kp X        &kp C                 &kp D       &kp V            &kp K      &kp H       &kp COMMA          &kp DOT      &kp ENTER     &none
-                                  &sk LS(LA(LC(LCMD)))  &sl 2       &kp BACKSPACE    &kp SPACE  &sl 1       &sk LS(LA(LCTRL))
+&none  &kp Q         &kp W        &kp F                 &kp P          &kp B    &kp J  &kp L       &kp U              &kp Y        &mt ESC TAB   &none
+&none  &mt LSHIFT A  &mt LCTRL R  &mt LALT S            &mt LCMD T     &kp G    &kp M  &mt LCMD N  &mt LALT E         &mt LCTRL I  &mt LSHIFT O  &none
+&none  &kp Z         &kp X        &kp C                 &kp D          &kp V    &kp K  &kp H       &kp COMMA          &kp DOT      &kp ENTER     &none
+                                  &sk LS(LA(LC(LCMD)))  &kp BACKSPACE  &sl 2    &sl 1  &kp SPACE   &sk LS(LA(LCTRL))
             >;
         };
 
@@ -38,7 +38,7 @@
 &none  &kp EXCL          &kp AT          &kp HASH        &kp DOLLAR     &kp PERCENT    &kp PLUS   &kp EQUAL       &kp QUESTION           &kp PIPE                 &kp BACKSLASH     &trans
 &none  &mt LSHIFT CARET  &mt LCTRL AMPS  &mt LALT ASTRK  &mt LCMD LPAR  &kp RPAR       &kp UNDER  &mt LCMD MINUS  &mt LALT SINGLE_QUOTE  &mt LCTRL DOUBLE_QUOTES  &mt LSHIFT SLASH  &trans
 &none  &kp LBKT          &kp RBKT        &kp LBRC        &kp RBRC       &to 0          &kp SEMI   &kp COLON       &kp GRAVE              &kp TILDE                &kp ENTER         &trans
-                                         &trans          &to 2          &trans         &trans     &trans          &trans
+                                         &trans          &trans         &to 2          &trans     &trans          &trans
             >;
         };
 
@@ -47,34 +47,34 @@
 &none  &kp N1         &kp N2        &kp N3       &kp N4       &kp N5    &kp LS(LC(TAB))  &kp PG_DN  &kp PG_UP  &kp LC(TAB)  &none      &none
 &none  &mt LSHIFT N6  &mt LCTRL N7  &mt LALT N8  &mt LCMD N9  &kp N0    &kp LEFT         &kp DOWN   &kp UP     &kp RIGHT    &none      &none
 &none  &to 4          &to 5         &none        &to 3        &to 0     &sk LSHFT        &sk LCMD   &sk LALT   &sk LCTRL    &kp ENTER  &none
-                                    &trans       &trans       &trans    &trans           &to 1      &trans
+                                    &trans       &trans       &trans    &to 1            &trans     &trans
             >;
         };
 
         nav {
             bindings = <
-&none  &none       &none      &none     &none     &none     &kp LC(LS(TAB))  &kp PAGE_DOWN  &kp PG_UP  &kp LC(TAB)  &none      &none
-&none  &none       &none      &none     &none     &none     &kp LEFT         &kp DOWN       &kp UP     &kp RIGHT    &none      &none
-&none  &kp LSHIFT  &kp LCTRL  &kp LALT  &kp LCMD  &to 0     &none            &none          &none      &none        &kp ENTER  &none
-                              &none     &to 2     &trans    &trans           &to 1          &none
+&none  &none       &none      &none     &none     &none    &kp LC(LS(TAB))  &kp PAGE_DOWN  &kp PG_UP  &kp LC(TAB)  &none      &none
+&none  &none       &none      &none     &none     &none    &kp LEFT         &kp DOWN       &kp UP     &kp RIGHT    &none      &none
+&none  &kp LSHIFT  &kp LCTRL  &kp LALT  &kp LCMD  &to 0    &none            &none          &none      &none        &kp ENTER  &none
+                              &none     &trans    &to 2    &to 1            &trans         &none
             >;
         };
 
         ctrl_board {
             bindings = <
-&none  &none  &none  &none   &none  &none     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none
-&none  &none  &none  &none   &none  &none     &bt BT_CLR    &none         &none         &none         &none         &none
-&none  &none  &none  &none   &none  &to 0     &none         &none         &none         &none         &none         &none
-                     &trans  &to 2  &trans    &trans        &to 1         &trans
+&none  &none  &none  &none   &none   &none    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none
+&none  &none  &none  &none   &none   &none    &bt BT_CLR    &none         &none         &none         &none         &none
+&none  &none  &none  &none   &none   &to 0    &none         &none         &none         &none         &none         &none
+                     &trans  &trans  &to 2    &to 1         &trans        &trans
             >;
         };
 
         fn_keys {
             bindings = <
-&none  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5     &none   &none     &none     &none      &none  &none
-&none  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10    &none   &kp LCMD  &kp LALT  &kp LCTRL  &none  &none
-&none  &kp F11  &kp F12  &none   &none   &to 0      &none   &none     &none     &none      &none  &none
-                         &trans  &to 2   &trans     &trans  &to 1     &trans
+&none  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5     &none  &none     &none     &none      &none  &none
+&none  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10    &none  &kp LCMD  &kp LALT  &kp LCTRL  &none  &none
+&none  &kp F11  &kp F12  &none   &none   &to 0      &none  &none     &none     &none      &none  &none
+                         &trans  &trans  &to 2      &to 1  &trans    &trans
             >;
         };
     };
