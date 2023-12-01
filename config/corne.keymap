@@ -46,7 +46,7 @@
             bindings = <
 &none  &kp N1         &kp N2        &kp N3       &kp N4       &kp N5    &kp LS(LC(TAB))  &kp PG_DN  &kp PG_UP  &kp LC(TAB)  &none      &none
 &none  &mt LSHIFT N6  &mt LCTRL N7  &mt LALT N8  &mt LCMD N9  &kp N0    &kp LEFT         &kp DOWN   &kp UP     &kp RIGHT    &none      &none
-&none  &to 4          &to 5         &none        &none        &to 0     &sk LSHFT        &sk LCMD   &sk LALT   &sk LCTRL    &kp ENTER  &none
+&none  &to 3          &to 4         &none        &none        &to 0     &sk LSHFT        &sk LCMD   &sk LALT   &sk LCTRL    &kp ENTER  &none
                                     &trans       &trans       &trans    &trans           &to 1      &trans
             >;
         };
