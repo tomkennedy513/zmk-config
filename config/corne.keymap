@@ -26,10 +26,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q         &kp W        &kp F                 &kp P       &kp B            &kp J      &kp L       &kp U              &kp Y        &mt ESC TAB   &none
-&none  &mt LSHIFT A  &mt LCTRL R  &mt LALT S            &mt LCMD T  &kp G            &kp M      &mt LCMD N  &mt LALT E         &mt LCTRL I  &mt LSHIFT O  &none
-&none  &kp Z         &kp X        &kp C                 &kp D       &kp V            &kp K      &kp H       &kp COMMA          &kp DOT      &kp ENTER     &none
-                                  &sk LS(LA(LC(LCMD)))  &sl 2       &kp BACKSPACE    &kp SPACE  &sl 1       &sk LS(LA(LCTRL))
+&none  &kp Q         &kp W        &kp F                 &kp P          &kp B    &kp J  &kp L       &kp U              &kp Y        &mt ESC TAB   &none
+&none  &mt LSHIFT A  &mt LCTRL R  &mt LALT S            &mt LCMD T     &kp G    &kp M  &mt LCMD N  &mt LALT E         &mt LCTRL I  &mt LSHIFT O  &none
+&none  &kp Z         &kp X        &kp C                 &kp D          &kp V    &kp K  &kp H       &kp COMMA          &kp DOT      &kp ENTER     &none
+                                  &sk LS(LA(LC(LCMD)))  &kp BACKSPACE  &sl 2    &sl 1  &kp SPACE   &sk LS(LA(LCTRL))
             >;
 
             label = "MAIN";
