@@ -15,14 +15,7 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        Escape {
-            bindings = <&kp ESCAPE>;
-            key-positions = <37 40>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
