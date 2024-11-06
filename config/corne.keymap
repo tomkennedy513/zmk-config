@@ -45,7 +45,7 @@
 &none  &kp Q         &kp W        &kp E       &kp R       &kp T            &kp Y             &kp U       &kp I       &kp O        &mt ESC TAB   &none
 &none  &mt LSHIFT A  &mt LCTRL S  &mt LALT D  &mt LCMD F  &kp G            &kp H             &mt LCMD J  &mt LALT K  &mt LCTRL L  &mt LSHIFT P  &none
 &none  &kp Z         &kp X        &kp C       &kp V       &kp B            &kp N             &kp M       &kp COMMA   &kp DOT      &kp ENTER     &none
-                                  &kp ESCAPE  &sl 1       &kp BACKSPACE    &mt LSHIFT SPACE  &sl 2       &kp TAB
+                                  &lt 4 ESC   &sl 1       &kp BACKSPACE    &mt LSHIFT SPACE  &sl 2       &lt 3 TAB
             >;
 
             label = "MAIN";
@@ -66,22 +66,11 @@
             bindings = <
 &none  &kp N1         &kp N2        &kp N3       &kp N4       &kp N5    &kp LS(LC(TAB))  &kp PG_DN  &kp PG_UP  &kp LC(TAB)  &none      &none
 &none  &mt LSHIFT N6  &mt LCTRL N7  &mt LALT N8  &mt LCMD N9  &kp N0    &kp LEFT         &kp DOWN   &kp UP     &kp RIGHT    &none      &none
-&none  &to 3          &to 4         &none        &none        &to 0     &sk LSHFT        &sk LCMD   &sk LALT   &sk LCTRL    &kp ENTER  &none
+&none  &none          &none         &none        &none        &to 0     &sk LSHFT        &sk LCMD   &sk LALT   &sk LCTRL    &kp ENTER  &none
                                     &trans       &none        &trans    &trans           &trans     &trans
             >;
 
             label = "NUM";
-        };
-
-        CTRL_BOARD {
-            bindings = <
-&none  &none  &none  &none   &none  &none     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none
-&none  &none  &none  &none   &none  &none     &bt BT_CLR    &none         &none         &none         &none         &none
-&none  &none  &none  &none   &none  &to 0     &none         &none         &none         &none         &none         &none
-                     &trans  &none  &trans    &trans        &none         &trans
-            >;
-
-            label = "CTRL";
         };
 
         FN_KEYS {
@@ -93,6 +82,17 @@
             >;
 
             label = "FN";
+        };
+
+        CTRL_BOARD {
+            bindings = <
+&none  &none  &none  &none   &none  &none     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none
+&none  &none  &none  &none   &none  &none     &bt BT_CLR    &none         &none         &none         &none         &none
+&none  &none  &none  &none   &none  &to 0     &none         &none         &none         &none         &none         &none
+                     &trans  &none  &trans    &trans        &none         &trans
+            >;
+
+            label = "CTRL";
         };
     };
 };
