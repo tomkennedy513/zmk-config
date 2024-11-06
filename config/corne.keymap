@@ -31,6 +31,15 @@
         };
     };
 
+    behaviors {
+        zoom_double_tap: zoom_double_tap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ZOOM_DOUBLE_TAP";
+            #binding-cells = <0>;
+            bindings = <&none>, <&kp LS(LG(A))>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -42,9 +51,9 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q         &kp W        &kp E       &kp R       &kp T            &kp Y             &kp U       &kp I       &kp O        &mt ESC TAB   &none
-&none  &mt LSHIFT A  &mt LCTRL S  &mt LALT D  &mt LCMD F  &kp G            &kp H             &mt LCMD J  &mt LALT K  &mt LCTRL L  &mt LSHIFT P  &none
-&none  &kp Z         &kp X        &kp C       &kp V       &kp B            &kp N             &kp M       &kp COMMA   &kp DOT      &kp ENTER     &none
+&none  &kp Q         &kp W        &kp E       &kp R       &kp T            &kp Y             &kp U       &kp I       &kp O        &zoom_double_tap  &none
+&none  &mt LSHIFT A  &mt LCTRL S  &mt LALT D  &mt LCMD F  &kp G            &kp H             &mt LCMD J  &mt LALT K  &mt LCTRL L  &mt LSHIFT P      &none
+&none  &kp Z         &kp X        &kp C       &kp V       &kp B            &kp N             &kp M       &kp COMMA   &kp DOT      &kp ENTER         &none
                                   &lt 4 ESC   &sl 1       &kp BACKSPACE    &mt LSHIFT SPACE  &sl 2       &lt 3 TAB
             >;
 
