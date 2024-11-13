@@ -12,6 +12,8 @@
 &mt {
     hold-while-undecided;
     require-prior-idle-ms = <125>;
+    flavor = "balanced";
+    quick-tap-ms = <50>;
 };
 
 / {
