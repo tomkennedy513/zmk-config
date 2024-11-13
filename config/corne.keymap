@@ -10,9 +10,8 @@
 #include <dt-bindings/zmk/outputs.h>
 
 &mt {
-    retro-tap;
     hold-while-undecided;
-    require-prior-idle-ms = <20>;
+    require-prior-idle-ms = <125>;
 };
 
 / {
