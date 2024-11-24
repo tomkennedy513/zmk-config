@@ -21,12 +21,21 @@
             >;
         };
 
-        SYMBOL {
+        Symbol {
             bindings = <
 &kp EXCL         &kp AT          &kp POUND       &kp DLLR         &kp PERCENT    &kp LS(PLUS)  &kp EQUAL        &kp LS(QMARK)          &kp LS(PIPE)             &kp BSLH
 &mt LSHFT CARET  &mt LCTRL AMPS  &mt LALT ASTRK  &mt LGUI LPAR    &kp RPAR       &kp UNDER     &mt LGUI MINUS   &mt LALT SINGLE_QUOTE  &mt LCTRL DOUBLE_QUOTES  &mt LSHFT SLASH
 &kp LBKT         &kp RBKT        &kp LEFT_BRACE  &kp RIGHT_BRACE  &to 0          &kp SEMI      &kp COLON        &kp GRAVE              &kp TILDE                &kp RET
                                                  &kp BACKSPACE    &none          &none         &mt LSHFT SPACE
+            >;
+        };
+
+        Number {
+            bindings = <
+&kp N1        &kp N2        &kp N3       &kp N4         &kp N5    &kp LS(LC(TAB))  &kp PG_DN        &kp PG_UP  &kp LC(TAB)  &kp K_SCROLL_UP
+&mt LSHFT N6  &mt LCTRL N7  &mt LALT N8  &mt LGUI N9    &kp N0    &kp LEFT         &kp DOWN         &kp UP     &kp RIGHT    &kp K_SCROLL_DOWN
+&trans        &trans        &trans       &trans         &to 0     &kp LSHFT        &kp LGUI         &kp LALT   &kp LCTRL    &kp RET
+                                         &kp BACKSPACE  &none     &none            &mt LSHFT SPACE
             >;
         };
     };
