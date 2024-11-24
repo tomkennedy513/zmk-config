@@ -14,10 +14,19 @@
 
         Main {
             bindings = <
-&kp Q        &kp W        &kp E       &kp R          &kp T            &kp Y      &kp U       &kp I           &kp O        &kp P
-&mt LSHFT A  &mt LCTRL S  &mt LALT D  &mt LGUI F     &kp G            &kp H      &mt LGUI J  &mt LEFT_ALT K  &mt LCTRL L  &mt LSHFT SQT
-&kp Z        &kp X        &kp C       &kp V          &kp B            &kp N      &kp M       &kp COMMA       &kp DOT      &kp ENTER
-                                      &kp BACKSPACE  &kp BACKSPACE    &kp SPACE  &kp SPACE
+&kp Q        &kp W        &kp E       &kp R          &kp T    &kp Y      &kp U            &kp I           &kp O        &kp P
+&mt LSHFT A  &mt LCTRL S  &mt LALT D  &mt LGUI F     &kp G    &kp H      &mt LGUI J       &mt LEFT_ALT K  &mt LCTRL L  &mt LSHFT SQT
+&kp Z        &kp X        &kp C       &kp V          &kp B    &kp N      &kp M            &kp COMMA       &kp DOT      &kp ENTER
+                                      &kp BACKSPACE  &sl 1    &kp SPACE  &mt LSHFT SPACE
+            >;
+        };
+
+        SYMBOL {
+            bindings = <
+&kp EXCL         &kp AT          &kp POUND       &kp DLLR         &kp PERCENT    &kp LS(PLUS)  &kp EQUAL        &kp LS(QMARK)          &kp LS(PIPE)             &kp BSLH
+&mt LSHFT CARET  &mt LCTRL AMPS  &mt LALT ASTRK  &mt LGUI LPAR    &kp RPAR       &kp UNDER     &mt LGUI MINUS   &mt LALT SINGLE_QUOTE  &mt LCTRL DOUBLE_QUOTES  &mt LSHFT SLASH
+&kp LBKT         &kp RBKT        &kp LEFT_BRACE  &kp RIGHT_BRACE  &to 0          &kp SEMI      &kp COLON        &kp GRAVE              &kp TILDE                &kp RET
+                                                 &kp BACKSPACE    &none          &none         &mt LSHFT SPACE
             >;
         };
     };
