@@ -22,6 +22,11 @@
             bindings = <&kp TAB>;
             key-positions = <33 30>;
         };
+
+        fn {
+            bindings = <&sl 3>;
+            key-positions = <32 33>;
+        };
     };
 
     keymap {
@@ -29,7 +34,7 @@
 
         Main {
             bindings = <
-&kp Q        &kp W        &kp E       &kp R          &kp T    &kp Y  &kp U            &kp I           &kp O        &lt 3 TAB
+&kp Q        &kp W        &kp E       &kp R          &kp T    &kp Y  &kp U            &kp I           &kp O        &none
 &mt LSHFT A  &mt LCTRL S  &mt LALT D  &mt LGUI F     &kp G    &kp H  &mt LGUI J       &mt LEFT_ALT K  &mt LCTRL L  &mt LSHFT P
 &kp Z        &kp X        &kp C       &kp V          &kp B    &kp N  &kp M            &kp COMMA       &kp DOT      &kp ENTER
                                       &kp BACKSPACE  &sl 1    &sl 2  &mt LSHFT SPACE
