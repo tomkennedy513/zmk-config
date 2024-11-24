@@ -11,6 +11,7 @@
 };
 
 
+/ {
 
 keymap {
 		compatible = "zmk,keymap";
@@ -23,4 +24,5 @@ keymap {
 			                                      &lc NAV     &kp BACKSPACE        &kp SPACE    &lc SYM
 			>;
 		};
+};
 };
