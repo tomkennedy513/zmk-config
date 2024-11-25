@@ -24,7 +24,7 @@
         };
 
         fn {
-            bindings = <&sl 5>;
+            bindings = <&mo 5>;
             key-positions = <32 33>;
         };
     };
