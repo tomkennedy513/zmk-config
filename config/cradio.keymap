@@ -30,9 +30,9 @@
     };
 
     behaviors {
-        july_layer: july_layer {
+        colemak_layer: colemak_layer {
             compatible = "zmk,behavior-tap-dance";
-            label = "JULY_LAYER";
+            label = "COLEMAK_LAYER";
             #binding-cells = <0>;
             bindings = <&none>, <&to 4>;
         };
@@ -50,7 +50,7 @@
 
         Main {
             bindings = <
-&kp Q        &kp W        &kp E       &kp R          &kp T    &kp Y  &kp U            &kp I           &kp O        &july_layer
+&kp Q        &kp W        &kp E       &kp R          &kp T    &kp Y  &kp U            &kp I           &kp O        &colemak_layer
 &mt LSHFT A  &mt LCTRL S  &mt LALT D  &mt LGUI F     &kp G    &kp H  &mt LGUI J       &mt LEFT_ALT K  &mt LCTRL L  &mt LSHFT P
 &kp Z        &kp X        &kp C       &kp V          &kp B    &kp N  &kp M            &kp COMMA       &kp DOT      &kp ENTER
                                       &kp BACKSPACE  &sl 1    &sl 2  &mt LSHFT SPACE
@@ -84,9 +84,9 @@
             >;
         };
 
-        July {
+        colemak {
             bindings = <
-&kp Q        &kp W        &kp F       &kp P          &kp B    &kp J  &kp U            &kp L           &kp Y        &main_layer
+&kp Q        &kp W        &kp F       &kp P          &kp B    &kp J  &kp L            &kp U           &kp Y        &main_layer
 &mt LSHFT A  &mt LCTRL S  &mt LALT R  &mt LGUI T     &kp G    &kp M  &mt LGUI N       &mt LEFT_ALT E  &mt LCTRL I  &mt LSHFT O
 &kp Z        &kp X        &kp C       &kp D          &kp V    &kp K  &kp H            &kp COMMA       &kp DOT      &kp ENTER
                                       &kp BACKSPACE  &sl 1    &sl 2  &mt LSHFT SPACE
