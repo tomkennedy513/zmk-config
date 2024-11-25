@@ -30,11 +30,11 @@
     };
 
     behaviors {
-        alternate_layers: alternate_layers {
+        july_layer: july_layer {
             compatible = "zmk,behavior-tap-dance";
-            label = "ALTERNATE_LAYERS";
+            label = "JULY_LAYER";
             #binding-cells = <0>;
-            bindings = <&none>, <&to 1>, <&to 2>;
+            bindings = <&none>, <&to 1>;
         };
 
         main_layer: main_layer {
@@ -43,6 +43,13 @@
             #binding-cells = <0>;
             bindings = <&none>, <&to 0>;
         };
+
+        colemak_layer: colemak_layer {
+            compatible = "zmk,behavior-tap-dance";
+            label = "COLEMAK_LAYER";
+            #binding-cells = <0>;
+            bindings = <&none>, <&to 2>;
+        };
     };
 
     keymap {
@@ -50,9 +57,18 @@
 
         Main {
             bindings = <
-&kp Q        &kp W        &kp E       &kp R          &kp T    &kp Y  &kp U            &kp I           &kp O        &alternate_layers
+&kp Q        &kp W        &kp E       &kp R          &kp T    &kp Y  &kp U            &kp I           &kp O        &july_layer
 &mt LSHFT A  &mt LCTRL S  &mt LALT D  &mt LGUI F     &kp G    &kp H  &mt LGUI J       &mt LEFT_ALT K  &mt LCTRL L  &mt LSHFT P
 &kp Z        &kp X        &kp C       &kp V          &kp B    &kp N  &kp M            &kp COMMA       &kp DOT      &kp ENTER
+                                      &kp BACKSPACE  &sl 3    &sl 4  &mt LSHFT SPACE
+            >;
+        };
+
+        july {
+            bindings = <
+&kp Q        &kp W        &kp F       &kp P          &kp G    &kp J  &kp U            &kp L           &kp Y        &colemak_layer
+&mt LSHFT A  &mt LCTRL S  &mt LALT R  &mt LGUI T     &kp D    &kp H  &mt LGUI N       &mt LEFT_ALT E  &mt LCTRL I  &mt LSHFT O
+&kp Z        &kp X        &kp C       &kp V          &kp B    &kp K  &kp M            &kp COMMA       &kp DOT      &kp ENTER
                                       &kp BACKSPACE  &sl 3    &sl 4  &mt LSHFT SPACE
             >;
         };
@@ -61,15 +77,6 @@
             bindings = <
 &kp Q        &kp W        &kp F       &kp P          &kp G    &kp J  &kp L            &kp U           &kp Y        &main_layer
 &mt LSHFT A  &mt LCTRL R  &mt LALT S  &mt LGUI T     &kp D    &kp H  &mt LGUI N       &mt LEFT_ALT E  &mt LCTRL I  &mt LSHFT O
-&kp Z        &kp X        &kp C       &kp V          &kp B    &kp K  &kp M            &kp COMMA       &kp DOT      &kp ENTER
-                                      &kp BACKSPACE  &sl 3    &sl 4  &mt LSHFT SPACE
-            >;
-        };
-
-        july {
-            bindings = <
-&kp Q        &kp W        &kp F       &kp P          &kp G    &kp J  &kp U            &kp L           &kp Y        &main_layer
-&mt LSHFT A  &mt LCTRL S  &mt LALT R  &mt LGUI T     &kp D    &kp H  &mt LGUI N       &mt LEFT_ALT E  &mt LCTRL I  &mt LSHFT O
 &kp Z        &kp X        &kp C       &kp V          &kp B    &kp K  &kp M            &kp COMMA       &kp DOT      &kp ENTER
                                       &kp BACKSPACE  &sl 3    &sl 4  &mt LSHFT SPACE
             >;
