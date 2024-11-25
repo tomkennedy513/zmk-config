@@ -59,9 +59,9 @@
 
         colemak {
             bindings = <
-&kp Q        &kp W        &kp F       &kp P          &kp B    &kp J  &kp L            &kp U           &kp Y        &main_layer
-&mt LSHFT A  &mt LCTRL R  &mt LALT S  &mt LGUI T     &kp G    &kp M  &mt LGUI N       &mt LEFT_ALT E  &mt LCTRL I  &mt LSHFT O
-&kp Z        &kp X        &kp C       &kp D          &kp V    &kp K  &kp H            &kp COMMA       &kp DOT      &kp ENTER
+&kp Q        &kp W        &kp F       &kp P          &kp G    &kp J  &kp L            &kp U           &kp Y        &main_layer
+&mt LSHFT A  &mt LCTRL R  &mt LALT S  &mt LGUI T     &kp D    &kp H  &mt LGUI N       &mt LEFT_ALT E  &mt LCTRL I  &mt LSHFT O
+&kp Z        &kp X        &kp C       &kp V          &kp B    &kp K  &kp M            &kp COMMA       &kp DOT      &kp ENTER
                                       &kp BACKSPACE  &sl 2    &sl 3  &mt LSHFT SPACE
             >;
         };
