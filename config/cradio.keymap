@@ -6,7 +6,7 @@
     hold-while-undecided;
     require-prior-idle-ms = <150>;
     flavor = "balanced";
-    quick-tap-ms = <50>;
+    quick-tap-ms = <150>;
 };
 
 / {
