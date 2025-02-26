@@ -5,7 +5,6 @@
 &mt {
     hold-while-undecided;
     require-prior-idle-ms = <100>;
-    flavor = "balanced";
     quick-tap-ms = <150>;
 };
 
