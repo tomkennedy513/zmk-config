@@ -56,39 +56,11 @@
             bindings = <&none>, <&to 0>;
         };
 
-        zoom_mute: zoom_mute {
+        zoom_mute_tmux: zoom_mute_tmux {
             compatible = "zmk,behavior-tap-dance";
-            label = "ZOOM_MUTE";
+            label = "ZOOM_MUTE_TMUX";
             #binding-cells = <0>;
-            bindings = <&none>, <&kp LS(LC(LG(A)))>;
-        };
-
-        lh_pht: left_hand_positional_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 13 12 11 10>;
-            hold-while-undecided;
-            require-prior-idle-ms = <100>;
-            flavor = "balanced";
-            label = "LH_PHT";
-        };
-
-        rh_pht: right_hand_positional_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            hold-trigger-key-positions = <0 10 20 21 11 1 3 2 12 22 23 13 4 14 24 16 17 18 19>;
-            hold-while-undecided;
-            require-prior-idle-ms = <100>;
-            flavor = "balanced";
-            label = "RH_PHT";
+            bindings = <&kp LC(SPACE)>, <&kp LS(LC(LG(A)))>;
         };
 
         thumb_space: thumb_space {
@@ -109,7 +81,7 @@
 
         Main {
             bindings = <
-&kp Q        &kp W        &kp E       &kp R          &kp T    &kp Y  &kp U                     &kp I           &kp O        &zoom_mute
+&kp Q        &kp W        &kp E       &kp R          &kp T    &kp Y  &kp U                     &kp I           &kp O        &zoom_mute_tmux
 &mt LSHFT A  &mt LCTRL S  &mt LALT D  &mt LGUI F     &kp G    &kp H  &mt LGUI J                &mt LEFT_ALT K  &mt LCTRL L  &mt LSHFT P
 &kp Z        &kp X        &kp C       &kp V          &kp B    &kp N  &kp M                     &kp COMMA       &kp DOT      &kp ENTER
                                       &kp BACKSPACE  &sl 1    &sl 2  &thumb_space LSHFT SPACE
