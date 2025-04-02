@@ -27,11 +27,6 @@
             bindings = <&mo 3>;
             key-positions = <32 33>;
         };
-
-        modifiers {
-            bindings = <&mo 4>;
-            key-positions = <31 30>;
-        };
     };
 
     behaviors {
@@ -81,27 +76,27 @@
 
         Main {
             bindings = <
-&mt LSHFT Q        &mt LCTRL W            &mt LALT E           &mt LCMD R           &kp T    &kp Y  &mt LCMD U       &mt LALT I      &mt LCTRL O            &kp LEFT_SHIFT
-&kp A  &kp S  &kp D  &kp F  &kp G    &kp H  &kp J   &kp K  &kp L  &kp P
-&kp Z        &kp X            &kp C           &kp V           &kp B    &kp N  &kp M            &kp COMMA           &kp DOT          &kp ENTER
-                                              &kp BACKSPACE   &sl 1    &sl 2  &mt LSHFT SPACE
+&mt LSHFT Q  &mt LCTRL W  &mt LALT E  &mt LCMD R     &kp T    &kp Y  &mt LCMD U       &mt LALT I  &mt LCTRL O  &kp LEFT_SHIFT
+&kp A        &kp S        &kp D       &kp F          &kp G    &kp H  &kp J            &kp K       &kp L        &kp P
+&kp Z        &kp X        &kp C       &kp V          &kp B    &kp N  &kp M            &kp COMMA   &kp DOT      &kp ENTER
+                                      &kp BACKSPACE  &sl 1    &sl 2  &mt LSHFT SPACE
             >;
         };
 
         Symbol {
             bindings = <
-&kp EXCL         &kp AT          &kp POUND       &kp DLLR         &kp PERCENT    &kp LS(PLUS)  &kp EQUAL                 &kp LS(QMARK)          &kp LS(PIPE)             &kp BSLH
-&mt LSHFT CARET  &mt LCTRL AMPS  &mt LALT ASTRK  &mt LGUI LPAR    &kp RPAR       &kp UNDER     &mt LGUI MINUS            &mt LALT SINGLE_QUOTE  &mt LCTRL DOUBLE_QUOTES  &mt LSHFT SLASH
-&kp LBKT         &kp RBKT        &kp LEFT_BRACE  &kp RIGHT_BRACE  &to 0          &kp SEMI      &kp COLON                 &kp GRAVE              &kp TILDE                &kp RET
-                                                 &kp BACKSPACE    &none          &none         &thumb_space LSHFT SPACE
+&mt LSHFT EXCL  &mt LCTRL AT  &mt LALT POUND  &mt LCMD DLLR    &kp PERCENT    &kp LS(PLUS)  &mt LCMD EQUAL            &mt LALT LS(QMARK)  &mt LCTRL LS(PIPE)  &mt LSHFT BSLH
+&kp CARET       &kp AMPS      &kp ASTRK       &kp LPAR         &kp RPAR       &kp UNDER     &kp MINUS                 &kp SINGLE_QUOTE    &kp DOUBLE_QUOTES   &kp SLASH
+&kp LBKT        &kp RBKT      &kp LEFT_BRACE  &kp RIGHT_BRACE  &to 0          &kp SEMI      &kp COLON                 &kp GRAVE           &kp TILDE           &kp RET
+                                              &kp BACKSPACE    &none          &none         &thumb_space LSHFT SPACE
             >;
         };
 
         Number {
             bindings = <
-&kp N1        &kp N2        &kp N3       &kp N4         &kp N5    &kp LS(LC(TAB))  &kp PG_DN                 &kp PG_UP  &kp LC(TAB)  &none
-&mt LSHFT N6  &mt LCTRL N7  &mt LALT N8  &mt LGUI N9    &kp N0    &kp LEFT         &kp DOWN                  &kp UP     &kp RIGHT    &none
-&trans        &trans        &trans       &trans         &to 0     &kp LSHFT        &kp LGUI                  &kp LALT   &kp LCTRL    &kp RET
+&mt LSHFT N1  &mt LCTRL N2  &mt LALT N3  &mt LCMD N4    &kp N5    &none            &kp LGUI                  &kp LALT   &kp LCTRL    &kp LSHFT
+&kp N6        &kp N7        &kp N8       &kp N9         &kp N0    &kp LEFT         &kp DOWN                  &kp UP     &kp RIGHT    &none
+&trans        &trans        &trans       &trans         &to 0     &kp LS(LC(TAB))  &kp PG_DN                 &kp PG_UP  &kp LC(TAB)  &kp RET
                                          &kp BACKSPACE  &none     &none            &thumb_space LSHFT SPACE
             >;
         };
@@ -112,15 +107,6 @@
 &kp F6   &kp F7   &kp F8  &kp F9         &kp F10    &bt BT_CLR    &trans                    &trans        &trans        &trans
 &kp F11  &kp F12  &trans  &trans         &to 0      &trans        &trans                    &trans        &trans        &trans
                           &kp BACKSPACE  &none      &none         &thumb_space LSHFT SPACE
-            >;
-        };
-
-        modifiers {
-            bindings = <
-&trans     &trans     &trans        &trans    &trans    &trans  &trans  &trans  &trans  &trans
-&kp LSHFT  &kp LCTRL  &kp LEFT_ALT  &kp LGUI  &trans    &trans  &trans  &trans  &trans  &trans
-&trans     &trans     &trans        &trans    &trans    &trans  &trans  &trans  &trans  &trans
-                                    &trans    &trans    &trans  &trans
             >;
         };
     };
