@@ -81,10 +81,10 @@
 
         Main {
             bindings = <
-&mt LSHFT Q        &mt LCTRL W            &mt LALT E           &mt LCMD R           &kp T    &kp Y  &mt LCMD U       &mt LALT I      &mt LCTRL O            &kp LEFT_SHIFT
-&kp A  &kp S  &kp D  &kp F  &kp G    &kp H  &kp J   &kp K  &kp L  &kp P
-&kp Z        &kp X            &kp C           &kp V           &kp B    &kp N  &kp M            &kp COMMA           &kp DOT          &kp ENTER
-                                              &kp BACKSPACE   &sl 1    &sl 2  &mt LSHFT SPACE
+&mt LSHFT Q  &mt LCTRL W  &mt LALT E  &mt LCMD R     &kp T    &kp Y  &mt LCMD U       &mt LALT I  &mt LCTRL O  &kp LEFT_SHIFT
+&kp A        &kp S        &kp D       &kp F          &kp G    &kp H  &kp J            &kp K       &kp L        &kp P
+&kp Z        &kp X        &kp C       &kp V          &kp B    &kp N  &kp M            &kp COMMA   &kp DOT      &kp ENTER
+                                      &kp BACKSPACE  &sl 1    &sl 2  &mt LSHFT SPACE
             >;
         };
 
@@ -99,9 +99,9 @@
 
         Number {
             bindings = <
-&kp N1        &kp N2        &kp N3       &kp N4         &kp N5    &kp LS(LC(TAB))  &kp PG_DN                 &kp PG_UP  &kp LC(TAB)  &none
-&mt LSHFT N6  &mt LCTRL N7  &mt LALT N8  &mt LGUI N9    &kp N0    &kp LEFT         &kp DOWN                  &kp UP     &kp RIGHT    &none
-&trans        &trans        &trans       &trans         &to 0     &kp LSHFT        &kp LGUI                  &kp LALT   &kp LCTRL    &kp RET
+&kp N1        &kp N2        &kp N3       &kp N4         &kp N5    &kp LS(LC(TAB))  &kp PG_DN                 &kp PG_UP  &kp LC(TAB)     &none
+&mt LSHFT N6  &mt LCTRL N7  &mt LALT N8  &mt LGUI N9    &kp N0    &kp LEFT         &kp DOWN                  &kp UP     &kp RIGHT       &none
+&trans        &trans        &trans       &trans         &to 0     &kp LCMD         &kp LALT                  &kp LCTRL  &kp LEFT_SHIFT  &kp RET
                                          &kp BACKSPACE  &none     &none            &thumb_space LSHFT SPACE
             >;
         };
