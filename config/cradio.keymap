@@ -15,12 +15,12 @@
 
         escape {
             bindings = <&kp ESCAPE>;
-            key-positions = <33 30>;
+            key-positions = <31 32>;
         };
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <31 32>;
+            key-positions = <33 30>;
         };
 
         fn {
