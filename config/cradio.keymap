@@ -94,9 +94,9 @@
 
         Number {
             bindings = <
-&mt LSHFT N1  &mt LCTRL N2  &mt LALT N3  &mt LCMD N4    &kp N5    &none            &kp LGUI                  &kp LALT   &kp LCTRL    &kp LSHFT
+&mt LSHFT N1  &mt LCTRL N2  &mt LALT N3  &mt LCMD N4    &kp N5    &none            &sk LGUI                  &sk LALT   &sk LCTRL    &sk LSHFT
 &kp N6        &kp N7        &kp N8       &kp N9         &kp N0    &kp LEFT         &kp DOWN                  &kp UP     &kp RIGHT    &none
-&trans        &trans        &trans       &trans         &to 0     &kp LS(LC(TAB))  &kp PG_DN                 &kp PG_UP  &kp LC(TAB)  &kp RET
+&sk LSHFT     &sk LCTRL     &sk LALT     &sk LCMD       &to 0     &kp LS(LC(TAB))  &kp PG_DN                 &kp PG_UP  &kp LC(TAB)  &kp RET
                                          &kp BACKSPACE  &none     &none            &thumb_space LSHFT SPACE
             >;
         };
