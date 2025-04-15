@@ -30,13 +30,6 @@
     };
 
     behaviors {
-        july_layer: july_layer {
-            compatible = "zmk,behavior-tap-dance";
-            label = "JULY_LAYER";
-            #binding-cells = <0>;
-            bindings = <&none>, <&to 0>;
-        };
-
         main_layer: main_layer {
             compatible = "zmk,behavior-tap-dance";
             label = "MAIN_LAYER";
@@ -44,12 +37,6 @@
             bindings = <&none>, <&to 0>;
         };
 
-        colemak_layer: colemak_layer {
-            compatible = "zmk,behavior-tap-dance";
-            label = "COLEMAK_LAYER";
-            #binding-cells = <0>;
-            bindings = <&none>, <&to 0>;
-        };
 
         zoom_mute_tmux: zoom_mute_tmux {
             compatible = "zmk,behavior-tap-dance";
