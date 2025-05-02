@@ -52,6 +52,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
+            hold-while-undecided;
             require-prior-idle-ms = <25>;
             flavor = "balanced";
             label = "THUMB_SPACE";
@@ -66,7 +67,7 @@
 &mt LSHFT Q  &mt LCTRL W  &mt LALT E  &mt LCMD R     &kp T    &kp Y  &mt LCMD U       &mt LALT I  &mt LCTRL O  &kp LEFT_SHIFT
 &kp A        &kp S        &kp D       &kp F          &kp G    &kp H  &kp J            &kp K       &kp L        &kp P
 &kp Z        &kp X        &kp C       &kp V          &kp B    &kp N  &kp M            &kp COMMA   &kp DOT      &kp ENTER
-                                      &kp BACKSPACE  &sl 1    &sl 2  &mt LSHFT SPACE
+                                      &kp BACKSPACE  &sl 1    &sl 2  &thumb_space LSHFT SPACE
             >;
         };
 
