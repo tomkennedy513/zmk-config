@@ -27,3 +27,11 @@ include:
     shield: corne_left
   - board: nice_nano_v2
     shield: corne_right
+  - board: nice_nano_v2
+    shield: cradio_left
+    cmake-args: -DKEYMAP_FILE=../../config/ferris-callum.keymap -DCONFIG_ZMK_KEYBOARD_NAME=\"ferris-callum\" -DEXTRA_CONF_FILE=../../config/ferris-callum.conf
+    artifact-name: ferris_callum_left
+  - board: nice_nano_v2
+    shield: cradio_right
+    cmake-args: -DKEYMAP_FILE=../../config/ferris-callum.keymap -DCONFIG_ZMK_KEYBOARD_NAME=\"ferris-callum\" -DEXTRA_CONF_FILE=../../config/ferris-callum.conf
+    artifact-name: ferris_callum_right
