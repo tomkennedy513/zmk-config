@@ -13,37 +13,13 @@
     combos {
         compatible = "zmk,combos";
 
-        escape {
-            bindings = <&kp ESCAPE>;
-            key-positions = <31 32>;
-        };
-
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <33 30>;
-        };
-
-        fn {
-            bindings = <&mo 3>;
-            key-positions = <32 33>;
+        bt {
+            bindings = <&mo 4>;
+            key-positions = <30 31>;
         };
     };
 
     behaviors {
-        main_layer: main_layer {
-            compatible = "zmk,behavior-tap-dance";
-            label = "MAIN_LAYER";
-            #binding-cells = <0>;
-            bindings = <&none>, <&to 0>;
-        };
-
-        zoom_mute_tmux: zoom_mute_tmux {
-            compatible = "zmk,behavior-tap-dance";
-            label = "ZOOM_MUTE_TMUX";
-            #binding-cells = <0>;
-            bindings = <&kp LC(SPACE)>, <&kp LS(LC(LG(A)))>;
-        };
-
         thumb_space: thumb_space {
             compatible = "zmk,behavior-hold-tap";
             tapping-term-ms = <120>;
@@ -54,6 +30,16 @@
             flavor = "balanced";
             label = "THUMB_SPACE";
         };
+
+        sk_quick_repeat: sk_quick_repeat {
+            compatible = "zmk,behavior-sticky-key";
+            label = "SK_QUICK_REPEAT";
+            bindings = <&kp>;
+            #binding-cells = <1>;
+            release-after-ms = <1000>;
+            quick-release;
+            ignore-modifiers;
+        };
     };
 
     keymap {
@@ -61,38 +47,56 @@
 
         Main {
             bindings = <
-&mt LSHFT Q  &mt LCTRL W  &mt LALT E  &mt LCMD R     &kp T    &kp Y  &mt LCMD U                &mt LALT I  &mt LCTRL O  &kp LEFT_SHIFT
-&kp A        &kp S        &kp D       &kp F          &kp G    &kp H  &kp J                     &kp K       &kp L        &kp P
-&kp Z        &kp X        &kp C       &kp V          &kp B    &kp N  &kp M                     &kp COMMA   &kp DOT      &kp ENTER
-                                      &kp BACKSPACE  &sl 1    &sl 2  &thumb_space LSHFT SPACE
+&kp Q  &kp W  &kp E  &kp R                        &kp T    &kp Y  &kp U      &kp I      &kp O    &key_repeat
+&kp A  &kp S  &kp D  &kp F                        &kp G    &kp H  &kp J      &kp K      &kp L    &kp P
+&kp Z  &kp X  &kp C  &kp V                        &kp B    &kp N  &kp M      &kp COMMA  &kp DOT  &kp SINGLE_QUOTE
+                     &sk_quick_repeat LEFT_SHIFT  &sl 1    &sl 2  &kp SPACE
             >;
         };
 
         Symbol {
             bindings = <
-&mt LSHFT EXCL  &mt LCTRL AT  &mt LALT POUND  &mt LCMD DLLR    &kp PERCENT    &kp LS(PLUS)  &mt LCMD EQUAL            &mt LALT LS(QMARK)  &mt LCTRL LS(PIPE)  &mt LSHFT BSLH
-&kp CARET       &kp AMPS      &kp ASTRK       &kp LPAR         &kp RPAR       &kp UNDER     &kp MINUS                 &kp SINGLE_QUOTE    &kp DOUBLE_QUOTES   &kp SLASH
-&kp LBKT        &kp RBKT      &kp LEFT_BRACE  &kp RIGHT_BRACE  &to 0          &kp SEMI      &kp COLON                 &kp GRAVE           &kp TILDE           &kp RET
-                                              &kp BACKSPACE    &none          &none         &thumb_space LSHFT SPACE
+&kp EXCLAMATION  &kp AT     &kp POUND  &kp DOLLAR  &kp LEFT_BRACE      &kp RIGHT_BRACE    &kp AMPS     &kp QUESTION  &kp PIPE   &kp BACKSLASH
+&kp GRAVE        &kp PLUS   &kp EQUAL  &kp COLON   &kp LPAR            &kp RPAR           &sk LGUI     &sk LALT      &sk LCTRL  &sk LSHFT
+&kp ASTRK        &kp SLASH  &kp MINUS  &kp UNDER   &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp PERCENT  &kp CARET     &kp TILDE  &kp SEMI
+                                       &trans      &trans              &trans             &trans
+            >;
+        };
+
+        Nav {
+            bindings = <
+&none      &none      &none     &none     &none     &kp HOME         &kp PG_DN  &kp PG_UP  &kp END      &kp DEL
+&sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI  &none     &kp LEFT         &kp DOWN   &kp UP     &kp RIGHT    &kp BACKSPACE
+&none      &none      &none     &none     &none     &kp LS(LC(TAB))  &kp TAB    &kp ESC    &kp LC(TAB)  &kp ENTER
+                                &trans    &trans    &trans           &trans
             >;
         };
 
         Number {
             bindings = <
-&mt LSHFT N1  &mt LCTRL N2  &mt LALT N3  &mt LCMD N4    &kp N5    &key_repeat      &sk LGUI                  &sk LALT   &sk LCTRL    &sk LSHFT
-&kp N6        &kp N7        &kp N8       &kp N9         &kp N0    &kp LEFT         &kp DOWN                  &kp UP     &kp RIGHT    &none
-&sk LSHFT     &sk LCTRL     &sk LALT     &sk LCMD       &to 0     &kp LS(LC(TAB))  &kp PG_DN                 &kp PG_UP  &kp LC(TAB)  &kp RET
-                                         &kp BACKSPACE  &none     &none            &thumb_space LSHFT SPACE
+&kp N1     &kp N2     &kp N3    &kp N4    &kp N5     &kp N6   &kp N7    &kp N8    &kp N9     &kp N0
+&sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI  &kp F11    &kp F12  &sk LGUI  &sk LALT  &sk LCTRL  &sk LSHFT
+&kp F1     &kp F2     &kp F3    &kp F4    &kp F5     &kp F6   &kp F7    &kp F8    &kp F9     &kp F10
+                                &trans    &trans     &trans   &trans
             >;
         };
 
-        Fn-Board {
+        Bluetooth {
             bindings = <
-&kp F1   &kp F2   &kp F3  &kp F4         &kp F5     &bt BT_SEL 0  &bt BT_SEL 1              &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&kp F6   &kp F7   &kp F8  &kp F9         &kp F10    &bt BT_CLR    &trans                    &trans        &trans        &trans
-&kp F11  &kp F12  &trans  &trans         &to 0      &trans        &trans                    &trans        &trans        &studio_unlock
-                          &kp BACKSPACE  &none      &none         &thumb_space LSHFT SPACE
+&none  &none  &none  &none   &none     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&none  &none  &none  &none   &none     &bt BT_CLR    &none         &none         &none         &none
+&none  &none  &none  &none   &to 0     &none         &none         &none         &none         &studio_unlock
+                     &trans  &trans    &trans        &trans
             >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        Number {
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 };
