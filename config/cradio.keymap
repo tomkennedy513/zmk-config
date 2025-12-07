@@ -30,20 +30,6 @@
     };
 
     behaviors {
-        main_layer: main_layer {
-            compatible = "zmk,behavior-tap-dance";
-            label = "MAIN_LAYER";
-            #binding-cells = <0>;
-            bindings = <&none>, <&to 0>;
-        };
-
-        zoom_mute_tmux: zoom_mute_tmux {
-            compatible = "zmk,behavior-tap-dance";
-            label = "ZOOM_MUTE_TMUX";
-            #binding-cells = <0>;
-            bindings = <&kp LC(SPACE)>, <&kp LS(LC(LG(A)))>;
-        };
-
         thumb_space: thumb_space {
             compatible = "zmk,behavior-hold-tap";
             tapping-term-ms = <120>;
@@ -61,19 +47,19 @@
 
         Main {
             bindings = <
-&mt LSHFT Q  &mt LCTRL W  &mt LALT E  &mt LCMD R     &kp T    &kp Y  &mt LCMD U                &mt LALT I  &mt LCTRL O  &kp LEFT_SHIFT
-&kp A        &kp S        &kp D       &kp F          &kp G    &kp H  &kp J                     &kp K       &kp L        &kp P
-&kp Z        &kp X        &kp C       &kp V          &kp B    &kp N  &kp M                     &kp COMMA   &kp DOT      &kp ENTER
-                                      &kp BACKSPACE  &sl 1    &sl 2  &thumb_space LSHFT SPACE
+&kp Q  &kp W  &kp E  &kp R           &kp T    &kp Y  &kp U      &kp I      &kp O    &kp BACKSPACE
+&kp A  &kp S  &kp D  &kp F           &kp G    &kp H  &kp J      &kp K      &kp L    &kp P
+&kp Z  &kp X  &kp C  &kp V           &kp B    &kp N  &kp M      &kp COMMA  &kp DOT  &key_repeat
+                     &kp LEFT_SHIFT  &sl 1    &sl 2  &kp SPACE
             >;
         };
 
         Symbol {
             bindings = <
-&mt LSHFT EXCL  &mt LCTRL AT  &mt LALT POUND  &mt LCMD DLLR    &kp PERCENT    &kp LS(PLUS)  &mt LCMD EQUAL            &mt LALT LS(QMARK)  &mt LCTRL LS(PIPE)  &mt LSHFT BSLH
-&kp CARET       &kp AMPS      &kp ASTRK       &kp LPAR         &kp RPAR       &kp UNDER     &kp MINUS                 &kp SINGLE_QUOTE    &kp DOUBLE_QUOTES   &kp SLASH
-&kp LBKT        &kp RBKT      &kp LEFT_BRACE  &kp RIGHT_BRACE  &to 0          &kp SEMI      &kp COLON                 &kp GRAVE           &kp TILDE           &kp RET
-                                              &kp BACKSPACE    &none          &none         &thumb_space LSHFT SPACE
+&kp EXCLAMATION  &kp AT    &kp POUND       &kp DOLLAR       &kp PERCENT    &kp LS(PLUS)  &mt LCMD EQUAL            &mt LALT LS(QMARK)  &mt LCTRL LS(PIPE)  &mt LSHFT BSLH
+&kp CARET        &kp AMPS  &kp ASTRK       &kp LPAR         &kp RPAR       &kp UNDER     &kp MINUS                 &kp SINGLE_QUOTE    &kp DOUBLE_QUOTES   &kp SLASH
+&kp LBKT         &kp RBKT  &kp LEFT_BRACE  &kp RIGHT_BRACE  &to 0          &kp SEMI      &kp COLON                 &kp GRAVE           &kp TILDE           &none
+                                           &kp BACKSPACE    &none          &none         &thumb_space LSHFT SPACE
             >;
         };
 
