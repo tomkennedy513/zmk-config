@@ -13,19 +13,9 @@
     combos {
         compatible = "zmk,combos";
 
-        escape {
-            bindings = <&kp ESCAPE>;
-            key-positions = <31 32>;
-        };
-
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <33 30>;
-        };
-
-        fn {
+        bt {
             bindings = <&mo 4>;
-            key-positions = <32 33>;
+            key-positions = <30 31>;
         };
     };
 
