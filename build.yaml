@@ -19,3 +19,5 @@ include:
   - board: nice_nano_v2
     shield: cradio_right
     artifact-name: sweep_right
+  - board: nice_nano_v2
+    shield: settings_reset
