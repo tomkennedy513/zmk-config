@@ -15,23 +15,7 @@
 include:
   - board: nice_nano_v2
     shield: cradio_left
-    snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
-  # - board: nice_nano_v2
-  #   shield: cradio_left
+    artifact-name: sweep_left
   - board: nice_nano_v2
     shield: cradio_right
-  - board: nice_nano_v2
-    shield: settings_reset
-  - board: nice_nano_v2
-    shield: corne_left
-  - board: nice_nano_v2
-    shield: corne_right
-  - board: nice_nano_v2
-    shield: cradio_left
-    cmake-args: -DKEYMAP_FILE=../../config/ferris-callum.keymap -DCONFIG_ZMK_KEYBOARD_NAME=\"ferris-callum\" -DEXTRA_CONF_FILE=../../config/ferris-callum.conf
-    artifact-name: ferris_callum_left
-  - board: nice_nano_v2
-    shield: cradio_right
-    cmake-args: -DKEYMAP_FILE=../../config/ferris-callum.keymap -DCONFIG_ZMK_KEYBOARD_NAME=\"ferris-callum\" -DEXTRA_CONF_FILE=../../config/ferris-callum.conf
-    artifact-name: ferris_callum_right
+    artifact-name: sweep_right
