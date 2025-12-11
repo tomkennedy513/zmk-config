@@ -65,10 +65,10 @@
 
         Nav {
             bindings = <
-&none      &none      &none     &none     &none     &kp HOME         &kp PG_DN  &kp PG_UP  &kp END      &kp DEL
-&sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI  &none     &kp LEFT         &kp DOWN   &kp UP     &kp RIGHT    &kp BACKSPACE
-&none      &none      &none     &none     &none     &kp LS(LC(TAB))  &kp TAB    &kp ESC    &kp LC(TAB)  &kp ENTER
-                                &trans    &trans    &trans           &trans
+&none      &none      &none     &none     &none         &kp HOME         &kp PG_DN  &kp PG_UP  &kp END      &kp DEL
+&sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI  &caps_word    &kp LEFT         &kp DOWN   &kp UP     &kp RIGHT    &kp BACKSPACE
+&none      &none      &none     &none     &none         &kp LS(LC(TAB))  &kp TAB    &kp ESC    &kp LC(TAB)  &kp ENTER
+                                &trans    &trans        &trans           &trans
             >;
         };
 
