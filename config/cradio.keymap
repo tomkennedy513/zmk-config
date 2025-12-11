@@ -56,9 +56,9 @@
 
         Symbol {
             bindings = <
-&kp EXCLAMATION  &kp AT     &kp POUND  &kp DOLLAR  &kp LEFT_BRACE      &kp RIGHT_BRACE    &kp AMPS     &kp QUESTION  &kp PIPE   &kp BACKSLASH
-&kp GRAVE        &kp PLUS   &kp EQUAL  &kp COLON   &kp LPAR            &kp RPAR           &sk LGUI     &sk LALT      &sk LCTRL  &sk LSHFT
-&kp ASTRK        &kp SLASH  &kp MINUS  &kp UNDER   &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp PERCENT  &kp CARET     &kp TILDE  &kp SEMI
+&kp EXCLAMATION  &kp AT     &kp POUND  &kp DOLLAR  &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp AMPS     &kp QUESTION  &kp PIPE   &kp BACKSLASH
+&kp GRAVE        &kp SLASH  &kp UNDER  &kp MINUS   &kp LPAR            &kp RPAR           &sk LGUI     &sk LALT      &sk LCTRL  &sk LSHFT
+&kp ASTRK        &kp PLUS   &kp EQUAL  &kp COLON   &kp LEFT_BRACE      &kp RIGHT_BRACE    &kp PERCENT  &kp CARET     &kp TILDE  &kp SEMI
                                        &trans      &trans              &trans             &trans
             >;
         };
