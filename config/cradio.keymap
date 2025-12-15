@@ -12,6 +12,11 @@
 
         bt {
             bindings = <&mo 4>;
+            key-positions = <32 33>;
+        };
+
+        cmd {
+            bindings = <&kp LCMD>;
             key-positions = <30 31>;
         };
     };
