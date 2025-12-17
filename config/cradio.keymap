@@ -33,6 +33,15 @@
         };
     };
 
+    macros {
+        caps_word_with_release: caps_word_with_release {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&caps_word &kp K_CANCEL>;
+            label = "CAPS_WORD_WITH_RELEASE";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -56,10 +65,10 @@
 
         Nav {
             bindings = <
-&none      &none      &none     &none      &none         &kp LS(LC(TAB))  &kp PG_DN  &kp PG_UP  &kp LC(TAB)  &kp DEL
-&sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI   &caps_word    &kp LEFT         &kp DOWN   &kp UP     &kp RIGHT    &kp BACKSPACE
-&none      &none      &none     &none      &none         &kp HOME         &kp TAB    &kp ESC    &kp END      &kp ENTER
-                                &kp LSHFT  &trans        &trans           &trans
+&none      &none      &none     &none      &none                      &kp LS(LC(TAB))  &kp PG_DN  &kp PG_UP  &kp LC(TAB)  &kp DEL
+&sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI   &caps_word_with_release    &kp LEFT         &kp DOWN   &kp UP     &kp RIGHT    &kp BACKSPACE
+&none      &none      &none     &none      &none                      &kp HOME         &kp TAB    &kp ESC    &kp END      &kp ENTER
+                                &kp LSHFT  &trans                     &trans           &trans
             >;
         };
 
