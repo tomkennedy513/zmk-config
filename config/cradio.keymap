@@ -29,7 +29,7 @@
             label = "SK_QUICK_RELEASE";
             bindings = <&kp>;
             #binding-cells = <1>;
-            release-after-ms = <1000>;
+            release-after-ms = <500>;
             quick-release;
             ignore-modifiers;
         };
